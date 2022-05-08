@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Space Mono', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100px;
+    font-family: inherit;
+    padding: 2px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.wrapper {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.1);
+}
+
+.outputs {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result {
+    color: green;
+}
