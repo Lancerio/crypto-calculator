@@ -15,34 +15,48 @@
     <h2>NFT Calculator</h2>
 
     <div class="container">
-        <form>
-            <label for="number">Price</label>
-            <input type="number" id="input" placeholder="Input">
-        </form>
+        <section>
+            <form>
+                <label for="number">Price</label>
+                <input type="number" id="input" placeholder="ETH">
+            </form>
 
-        <div class="wrapper">
-            <div class="outputs">
-                <span class="output-label">ETH/PHP</span>
-                <span class="output" id="rate-ETH">...</span>
+            <div class="wrapper">
+                <div class="outputs">
+                    <span class="output-label">ETH/PHP</span>
+                    <span class="output" id="rate-ETH">...</span>
+                </div>
+
+                <div class="outputs">
+                    <span class="output-label">Total Amount</span>
+                    <span class="result" id="result-ETH">0</span>
+                </div>
             </div>
 
-            <div class="outputs">
-                <span class="output-label">Result</span>
-                <span class="result" id="result-ETH">0</span>
-            </div>
-        </div>
+            <div class="wrapper">
+                <div class="outputs">
+                    <span class="output-label">SOL/PHP</span>
+                    <span class="output" id="rate-SOL">...</span>
+                </div>
 
-        <div class="wrapper">
-            <div class="outputs">
-                <span class="output-label">SOL/PHP</span>
-                <span class="output" id="rate-SOL">...</span>
+                <div class="outputs">
+                    <span class="output-label">Total Amount</span>
+                    <span class="result" id="result-SOL">0</span>
+                </div>
             </div>
+        </section>
+
+        <section>
+            <form>
+                <label for="amount">Amount</label>
+                <input type="amount" id="amount" placeholder="PHP">
+            </form>
 
             <div class="outputs">
-                <span class="output-label">Result</span>
-                <span class="result" id="result-SOL">0</span>
+                <span class="output-label">ETH</span>
+                <span class="result" id="amt-ETH">0</span>
             </div>
-        </div>
+        </section>
     </div>
     <script src="app.js"></script>
 </body>

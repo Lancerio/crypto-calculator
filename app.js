@@ -3,16 +3,19 @@
 // const input = document.querySelectorAll('input')
 
 const input = document.getElementById('input')
+const amount = document.getElementById('amount')
+
 const rate__ETH = document.getElementById('rate-ETH')
 const rate__SOL = document.getElementById('rate-SOL')
 
 const result__ETH = document.getElementById('result-ETH')
+const result__AmtETH = document.getElementById('amt-ETH')
 const result__SOL = document.getElementById('result-SOL')
 
 const API_ETH = 'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=php'
 const API_SOL = 'https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=php'
 
-
+// ETH
 async function getRate__ETH() {
     const res = await fetch(API_ETH)
     const data = await res.json()
@@ -24,10 +27,17 @@ async function getRate__ETH() {
         multiply = calcResult(final__ETH, userInput)
         result__ETH.innerHTML = Math.ceil(multiply).toLocaleString()
     })
+
+    amount.addEventListener('change', () => {
+        const userAmount = amount.value
+        divide = calcETH(userAmount, final__ETH)
+        result__AmtETH.innerHTML = divide.toFixed(4)
+    })
 }
 
 getRate__ETH()
 
+// SOL
 async function getRate__SOL() {
     const res = await fetch(API_SOL)
     const data = await res.json()
@@ -45,6 +55,10 @@ getRate__SOL()
 
 function calcResult(x, y) {
     return x * y
+}
+
+function calcETH(x, y) {
+    return x / y
 }
 
 
